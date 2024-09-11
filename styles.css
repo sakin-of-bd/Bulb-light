@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background-size: 400% 400%;
+    animation: backgroundShift 20s ease infinite;
+}
+
+.container {
+    text-align: center;
+}
+
+.light-bulb {
+    width: 300px;
+    height: 450px;
+    background-image: url('lightoff.png');
+    background-size: cover;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 30px;
+    border: 10px solid #ccc;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    animation: borderPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes borderPulse {
+    0% {
+        border-color: #ccc;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        border-color: #ff6f61;
+        box-shadow: 0 0 60px rgba(255, 111, 97, 0.8);
+    }
+    100% {
+        border-color: #ccc;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes backgroundShift {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
